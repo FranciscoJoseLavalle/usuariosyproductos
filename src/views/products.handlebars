@@ -1,0 +1,27 @@
+<div>
+    <a href="/">Registrarse</a>
+    <br>
+    <a href="/login">Iniciar sesión</a>
+    <br>
+    <a href="/products">Productos</a>
+    <br>
+    <a href="/data">Data</a>
+    <br>
+    <br>
+    <form id="productsForm">
+        <label for="name">Nombre del producto</label>
+        <input type="text" placeholder="Nombre del producto" id="name" name="name">
+        <br>
+        <label for="caracts">Características</label>
+        <input type="text" placeholder="Características del producto" id="caracts" name="caracts">
+        <br>
+        <input type="submit" value="Agregar producto">
+    </form>
+    <br>
+    <p>Productos:</p>
+    {{#each products.products}}
+        <li>{{this.name}} - {{this.caracts}}</li>
+    {{/each}}
+</div>
+
+<script src="js/products.js"></script>
